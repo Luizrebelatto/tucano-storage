@@ -15,7 +15,12 @@
     "jsSrcsDir": "specs",
     "android": {
       "javaPackageName": "com.tucanostorage.specs"
-    }
+    },
+    "ios": {
+      "modulesProvider": {
+        "NativeTucanoStorageModule":  "NativeTucanoStorageModuleProvider"
+      }
+   }
   },
   "dependencies": {
     "react": "18.3.1",

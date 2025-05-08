@@ -12,6 +12,8 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		29635B442DCC42A8007C4C68 /* NativeTucanoStorageModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29635B412DCC42A8007C4C68 /* NativeTucanoStorageModule.cpp */; };
+		29635B472DCC4347007C4C68 /* NativeTucanoStorageModuleProvider.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29635B462DCC4347007C4C68 /* NativeTucanoStorageModuleProvider.mm */; };
 		44321CAA3D85B66A1A014BEC /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		7699B88040F8A987B510C191 /* libPods-TucanoStorage-TucanoStorageTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-TucanoStorage-TucanoStorageTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -39,6 +41,10 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TucanoStorage/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = TucanoStorage/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-TucanoStorage-TucanoStorageTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TucanoStorage-TucanoStorageTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29635B412DCC42A8007C4C68 /* NativeTucanoStorageModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NativeTucanoStorageModule.cpp; sourceTree = "<group>"; };
+		29635B422DCC42A8007C4C68 /* NativeTucanoStorageModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeTucanoStorageModule.h; sourceTree = "<group>"; };
+		29635B452DCC4347007C4C68 /* NativeTucanoStorageModuleProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeTucanoStorageModuleProvider.h; sourceTree = "<group>"; };
+		29635B462DCC4347007C4C68 /* NativeTucanoStorageModuleProvider.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NativeTucanoStorageModuleProvider.mm; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-TucanoStorage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TucanoStorage.debug.xcconfig"; path = "Target Support Files/Pods-TucanoStorage/Pods-TucanoStorage.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-TucanoStorage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TucanoStorage.release.xcconfig"; path = "Target Support Files/Pods-TucanoStorage/Pods-TucanoStorage.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-TucanoStorage-TucanoStorageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TucanoStorage-TucanoStorageTests.debug.xcconfig"; path = "Target Support Files/Pods-TucanoStorage-TucanoStorageTests/Pods-TucanoStorage-TucanoStorageTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +105,16 @@
 			name = TucanoStorage;
 			sourceTree = "<group>";
 		};
+		29635B432DCC42A8007C4C68 /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				29635B412DCC42A8007C4C68 /* NativeTucanoStorageModule.cpp */,
+				29635B422DCC42A8007C4C68 /* NativeTucanoStorageModule.h */,
+			);
+			name = shared;
+			path = ../shared;
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +135,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				29635B452DCC4347007C4C68 /* NativeTucanoStorageModuleProvider.h */,
+				29635B462DCC4347007C4C68 /* NativeTucanoStorageModuleProvider.mm */,
+				29635B432DCC42A8007C4C68 /* shared */,
 				13B07FAE1A68108700A75B9A /* TucanoStorage */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* TucanoStorageTests */,
@@ -396,6 +415,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29635B442DCC42A8007C4C68 /* NativeTucanoStorageModule.cpp in Sources */,
+				29635B472DCC4347007C4C68 /* NativeTucanoStorageModuleProvider.mm in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
